@@ -492,6 +492,20 @@ section:nth-child(even) { background: var(--beige-dark); }
 }
 .qa-item.open .qa-a { max-height: 300px; padding: 18px 22px; }
 
+/* ===== RESUME PDF ===== */
+.resume-pdf-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.resume-iframe {
+  width: 100%;
+  height: 900px;
+  border: 1px solid var(--beige-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 /* ===== RESUME ===== */
 .resume-box {
   background: var(--white);
