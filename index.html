@@ -18,7 +18,6 @@
   <!-- ===== NAVIGATION ===== -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-logo">정다이 · DAYI JEONG</span>
       <ul class="nav-links">
         <li><a href="#about">소개</a></li>
         <li><a href="#skills">기술</a></li>
@@ -187,6 +186,22 @@
           </div>
         </div>
 
+        <div class="skill-group">
+          <h3 class="skill-group-title">🖥️ Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">🤝 협업 툴</h3>
+          <div class="skill-tags">
+            <span class="tag">GitHub</span>
+            <span class="tag">Notion</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -232,6 +247,7 @@
               class="stack-tag">Redis</span>
             <span class="stack-tag">SQLAlchemy</span><span class="stack-tag">JWT</span>
           </div>
+          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Oz_codingSchool" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
         </div>
 
         <div class="project-card featured">
@@ -251,6 +267,7 @@
             <li>시계열 특성 고려, 날짜 기준 순차 80/20 분할 — 미래 혈당 정보의 학습 유입 원천 차단</li>
             <li>Optuna(TPE Sampler, 300 Trial)의 목적함수를 위험 오답(소량↔고량 혼동) 최소화로 설정 → <strong>4건→1건(0.03%)</strong></li>
             <li>SHAP Waterfall plot으로 NPH 인슐린·저혈당 경계 케이스 오분류 원인 규명</li>
+            <li>11단계 실험 끝에 XGBoost 채택 — 이후 ARIA 원내 인슐린 자동 투여 시스템의 기반 모델로 재사용</li>
           </ul>
           <div class="project-result">
             <span class="result-badge">고량 F1-Score 0.920</span>
@@ -273,49 +290,71 @@
         <div class="project-card sub">
           <span class="project-icon">🫁</span>
           <h3 class="project-title">폐렴 X-ray 이진분류 (DACON)</h3>
-          <span class="project-role">개인 | CV · Transfer Learning | 2026.04</span>
-          <p>20회 이상 체계적 실험 → ConvNeXt-Tiny + DenseNet121 OR 앙상블</p>
+          <span class="project-role">개인 | 리더보드 7위 | CV · Transfer Learning | 2026.04</span>
+          <p>ResNet18 → ConvNeXt-Tiny → 앙상블까지 단계적 개선, 20회 이상 체계적 실험. AI 폐렴 진단 지원 시스템의 서빙 모델로 재사용.</p>
           <div class="project-result">
             <span class="result-badge">Balanced Accuracy 0.9615</span>
           </div>
           <div class="project-stack">
-            <span class="stack-tag">PyTorch</span><span class="stack-tag">EfficientNet</span><span
+            <span class="stack-tag">PyTorch</span><span class="stack-tag">ResNet18</span><span
               class="stack-tag">ConvNeXt</span>
           </div>
         </div>
 
         <div class="project-card sub">
-          <span class="project-icon">🚬</span>
-          <h3 class="project-title">흡연 건강지표 상관관계 분석</h3>
-          <span class="project-role">팀 | EDA · 통계 | 2026.02</span>
-          <p>의학 논문 기반 가설 4개 수립 · 카이제곱/t-검정 · 의료데이터 7,000건</p>
+          <span class="project-icon">🍼</span>
+          <h3 class="project-title">품앗이온(ON) · 온기</h3>
+          <span class="project-role">팀 (4인) | 프론트엔드·UX | 예선 통과(진행중) | 2026.07~</span>
+          <p>교대근무 부모의 육아 고립 문제를 여성 경력단절 사유 1위(육아 44.3%) 데이터 근거로 정의, AI가 이웃을 매칭해주는 서비스 기획 및 프론트엔드 개발.</p>
+          <ul class="project-points" style="margin-top:6px">
+            <li>온보딩·매칭결과·채팅 화면 React 개발, 사용자 플로우 설계, 시연 환경 구성</li>
+            <li>유사 서비스·MVP 조사, 화면설계서·화면디자인, 포인트 시스템 및 신뢰 3단계 등 안전장치 설계 논의 참여</li>
+          </ul>
           <div class="project-result">
-            <span class="result-badge">p-value &lt; 0.0001 (전 가설)</span>
+            <span class="result-badge">예선 통과</span>
           </div>
           <div class="project-stack">
-            <span class="stack-tag">Pandas</span><span class="stack-tag">SciPy</span><span
-              class="stack-tag">Seaborn</span>
+            <span class="stack-tag">React</span><span class="stack-tag">Figma</span><span
+              class="stack-tag">UX 설계</span>
+          </div>
+        </div>
+
+        <div class="project-card sub">
+          <span class="project-icon">💉</span>
+          <h3 class="project-title">ARIA — 원내 인슐린 자동 투여 시스템</h3>
+          <span class="project-role">팀장 (4인) | 예선 탈락 | 디지털 헬스케어 MEDICAL HACK 2026 | 2026.06.29</span>
+          <p>개인 연구로 개발한 인슐린 투여량 분류 모델(F1 0.920)을 원내 자동 투여 사업 모델로 확장, 실시간 혈당 모니터링 기능 추가.</p>
+          <ul class="project-points" style="margin-top:6px">
+            <li>프로젝트 구조 설계, AI 용량 계산 엔진 기획 및 XGBoost 모델 개발 전반, 제안서 작성 및 발표, 일정 관리</li>
+            <li>의료법 제27조·SaMD 등급 등 규제 대응 전략까지 조사한 사업화 기획 전 과정 수행</li>
+          </ul>
+          <div class="project-result">
+            <span class="result-badge">고용량 F1-Score 0.920</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">XGBoost</span><span class="stack-tag">사업 기획</span><span
+              class="stack-tag">규제 리서치</span>
           </div>
         </div>
 
         <div class="project-card sub">
           <span class="project-icon">📊</span>
           <h3 class="project-title">스트레스 수치 예측 (DACON)</h3>
-          <span class="project-role">개인 | ML · 회귀 | 2025</span>
-          <p>건강·생활습관 데이터 기반 stress_score 예측. KNN Imputation, OHE, Optuna 200 Trial</p>
+          <span class="project-role">개인 | 리더보드 12위 | ML · 회귀 | 2025</span>
+          <p>건강·생활습관 데이터 기반 stress_score 예측. 22개 피처, KNN Imputation, OHE, Optuna 200 Trial</p>
           <div class="project-result">
             <span class="result-badge">RMSE 0.17002</span>
           </div>
           <div class="project-stack">
             <span class="stack-tag">LightGBM</span><span class="stack-tag">XGBoost</span><span
-              class="stack-tag">Optuna</span>
+              class="stack-tag">CatBoost</span><span class="stack-tag">RandomForest</span>
           </div>
         </div>
 
         <div class="project-card sub">
           <span class="project-icon">🍀</span>
           <h3 class="project-title">난임 시술 성공 예측 (Kaggle)</h3>
-          <span class="project-role">팀 프로젝트 (개인 주도) | ML · DL · 이진분류 | 2026.06</span>
+          <span class="project-role">팀 프로젝트 (3인, 개인 주도) | 리더보드 3위 | ML · DL · 이진분류 | 2026.06</span>
           <p>영국 HFEA 익명화 데이터 기반 IVF/DI 난임 시술 임신 성공 여부 예측. 전처리·모델링·앙상블·PPT 발표 전담.</p>
           <ul class="project-points" style="margin-top:6px">
             <li>Train 256,351건 · 68개 컬럼 · 클래스 불균형(성공 26%) 이진분류</li>
@@ -380,7 +419,6 @@
   <section id="resume">
     <div class="section-inner">
       <h2 class="section-title">이력서</h2>
-      <p class="section-sub">맥스랩 AI 개발자 포지션 지원용</p>
       <div class="resume-pdf-wrap">
         <embed src="resume.pdf" type="application/pdf" class="resume-iframe" />
       </div>
@@ -401,10 +439,10 @@
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-dot"></div>
+          <div class="tl-dot current"></div>
           <div class="tl-content">
             <span class="tl-date">2026.02 ~ 2026.08 (예정)</span>
-            <h3>멀티캠퍼스 헬스케어 AI 부트캠프</h3>
+            <h3>오즈코딩스쿨 헬스케어 AI 부트캠프</h3>
             <p>ML/DL 모델링 · FastAPI/Docker 기반 서비스 구축 · 의료 데이터 분석 실무 중심 커리큘럼. 팀 프로젝트 4회, DACON 대회 2회 참가.</p>
           </div>
         </div>

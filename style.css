@@ -71,6 +71,7 @@ ul { list-style: none; }
 .nav-links {
   display: flex;
   gap: 6px;
+  margin-left: auto;
 }
 .nav-links a {
   padding: 6px 12px;
