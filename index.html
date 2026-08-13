@@ -252,33 +252,37 @@
 
         <div class="project-card featured">
           <div class="project-header">
-            <span class="project-icon">🧬</span>
+            <span class="project-icon">💊</span>
             <div>
-              <h3 class="project-title">AI 기반 인슐린 투여량 분류 모델</h3>
-              <span class="project-role">개인 프로젝트 | ML · 의료 AI | 2026.06</span>
+              <h3 class="project-title">Re:medi — LLM 기반 맞춤형 복약관리 서비스</h3>
+              <span class="project-role">팀 프로젝트 (5인) | 병합 PR 60건 이상 | 2026.06.29 ~ 08.07</span>
             </div>
           </div>
           <p class="project-desc">
-            환자 치료 세션 로그 기반 고주의약물 투여 의사결정 보조 모델
+            진료 기록과 복약 정보를 기반으로 LLM이 맞춤형 복약 안내·생활습관 가이드를 자동 생성하는 풀스택 헬스케어 서비스 — 알림 시스템 전체 설계부터 트래킹, 마이다이어리까지 담당
           </p>
           <ul class="project-points">
-            <li>UCI AIM '94 (70명 환자의 혈당·인슐린 투여·식사·운동 세션 로그, 29,296행) — Long-format 치료 로그를 Wide-format으로 변환, 14개 파생 피처 생성
-            </li>
-            <li>시계열 특성 고려, 날짜 기준 순차 80/20 분할 — 미래 혈당 정보의 학습 유입 원천 차단</li>
-            <li>Optuna(TPE Sampler, 300 Trial)의 목적함수를 위험 오답(소량↔고량 혼동) 최소화로 설정 → <strong>4건→1건(0.03%)</strong></li>
-            <li>SHAP Waterfall plot으로 NPH 인슐린·저혈당 경계 케이스 오분류 원인 규명</li>
-            <li>11단계 실험 끝에 XGBoost 채택 — 이후 ARIA 원내 인슐린 자동 투여 시스템의 기반 모델로 재사용</li>
+            <li>알림 시스템(22건): 다중 회차(qd/bid/tid) 복약 알림 + 캘린더 연동, 무음 시간대 예외 규칙, 웹푸시(VAPID)·FCM 이중 채널 발송, 스누즈 바텀시트</li>
+            <li>안드로이드 전용 알림 실패를 프로덕션 로그 분석으로 원인(Notification API 오용) 추적 후 <code>showNotification()</code> 경로로 통일해 수정</li>
+            <li>습관·순응도 트래킹(12건): LLM 습관 추천을 규칙+캐싱 구조로 재설계, 서버 계산 기반 순응도 히트맵 시각화, AI 월간 리포트 자동 생성</li>
+            <li>마이다이어리(6건): 식약처 식품영양성분DB 연동 식단 기록, MET 공식 기반 실시간 운동 칼로리 계산, 검색 정확도 개선(관련성 정렬 + AI 폴백)</li>
+            <li>UI 일관성(9건)·PWA 패키징(4건): 디자인 시스템 통일, 홈 화면 설치형 PWA 전환, 하단 탭바·온보딩 구현</li>
+            <li>대규모 소셜로그인 PR 병합 중 유실된 라우트·홈 기능·네비게이션 복구 등 인프라·버그 대응 6건</li>
           </ul>
           <div class="project-result">
-            <span class="result-badge">고량 F1-Score 0.920</span>
-            <span class="result-badge">위험 오답 0.03%</span>
+            <span class="result-badge">병합 PR 60건+</span>
+            <span class="result-badge">웹푸시·FCM 이중 채널</span>
+            <span class="result-badge">순응도 히트맵 · AI 리포트</span>
           </div>
           <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span
-              class="stack-tag">XGBoost</span>
-            <span class="stack-tag">LightGBM</span><span class="stack-tag">Optuna</span><span
-              class="stack-tag">SHAP</span><span class="stack-tag">SMOTE</span>
+            <span class="stack-tag">React 19</span><span class="stack-tag">TypeScript</span><span
+              class="stack-tag">Vite</span>
+            <span class="stack-tag">FastAPI</span><span class="stack-tag">SQLAlchemy</span><span
+              class="stack-tag">Alembic</span>
+            <span class="stack-tag">LLM (RAG)</span><span class="stack-tag">Docker</span><span
+              class="stack-tag">AWS EC2</span>
           </div>
+          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Re-medi" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
         </div>
 
       </div>
@@ -286,6 +290,21 @@
       <!-- 서브 프로젝트 -->
       <h3 class="project-category">✅ 서브 프로젝트</h3>
       <div class="projects-sub">
+
+        <div class="project-card sub">
+          <span class="project-icon">🧬</span>
+          <h3 class="project-title">AI 기반 인슐린 투여량 분류 모델</h3>
+          <span class="project-role">개인 | ML · 의료 AI | 2026.06</span>
+          <p>UCI AIM '94 치료 세션 로그 기반 고주의약물 투여 의사결정 보조 모델. 위험 오답 최소화 목적함수로 4건→1건(0.03%) 달성. 이후 ARIA 원내 자동 투여 시스템 기반 모델로 재사용.</p>
+          <div class="project-result">
+            <span class="result-badge">고량 F1-Score 0.920</span>
+            <span class="result-badge">위험 오답 0.03%</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">XGBoost</span><span class="stack-tag">LightGBM</span><span
+              class="stack-tag">Optuna</span><span class="stack-tag">SHAP</span>
+          </div>
+        </div>
 
         <div class="project-card sub">
           <span class="project-icon">🫁</span>
