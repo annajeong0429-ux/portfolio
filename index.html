@@ -97,7 +97,7 @@
           <div class="info-card">
             <div class="info-icon">⚡</div>
             <h3>AI 툴 기반 빠른 개발</h3>
-            <p>Claude, Gemini 활용 레퍼런스 기반 개발, FastAPI + Docker + Redis + MySQL 전체 AI 서빙 파이프라인 구축(팀장)</p>
+            <p>Claude, Gemini 활용 레퍼런스 기반 개발로 FastAPI 기반 AI 예측 서빙 기능을 빠르게 구현</p>
           </div>
         </div>
       </div>
@@ -217,41 +217,6 @@
 
         <div class="project-card featured">
           <div class="project-header">
-            <span class="project-icon">🫁</span>
-            <div>
-              <h3 class="project-title">AI 폐렴 진단 지원 시스템</h3>
-              <span class="project-role">팀 프로젝트 (팀장) | DL · MLOps | 2026.06</span>
-            </div>
-          </div>
-          <p class="project-desc">
-            실제 서비스를 전제로 빠르게 설계하고 구현한 AI 서빙 시스템
-          </p>
-          <ul class="project-points">
-            <li>ConvNeXt-Tiny + DenseNet121 각 5-Fold 앙상블(총 10개 모델), OR 앙상블로 <strong>Balanced Accuracy 0.9615</strong> 달성
-            </li>
-            <li>OR 앙상블 근거: '폐렴 미검출(FN)이 오검출(FP)보다 치명적'이라는 임상 논리를 코드에 직접 반영</li>
-            <li>FastAPI 비동기 서버 + Docker Compose로 FastAPI·MySQL·Redis 멀티 서비스 격리 배포, ERD 5개 테이블 설계</li>
-            <li>Redis 캐싱으로 동일 이미지 중복 예측 차단 (신규 201 / 캐시 200 분기) → 응답 속도 개선</li>
-            <li>Tensor-level Hook 기반 Grad-CAM으로 AI 판단 근거 흉부 X-ray 상 시각화 → 의료진 신뢰성 확보</li>
-            <li>생성형 AI 툴(ChatGPT, Claude)을 활용해 레퍼런스 기반으로 빠르게 구현·검증</li>
-          </ul>
-          <div class="project-result">
-            <span class="result-badge">Balanced Accuracy 0.9615</span>
-            <span class="result-badge">멀티서비스 AI 서빙</span>
-            <span class="result-badge">Grad-CAM 시각화</span>
-          </div>
-          <div class="project-stack">
-            <span class="stack-tag">Python</span><span class="stack-tag">PyTorch</span><span
-              class="stack-tag">FastAPI</span>
-            <span class="stack-tag">Docker</span><span class="stack-tag">MySQL</span><span
-              class="stack-tag">Redis</span>
-            <span class="stack-tag">SQLAlchemy</span><span class="stack-tag">JWT</span>
-          </div>
-          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Oz_codingSchool" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
             <span class="project-icon">💊</span>
             <div>
               <h3 class="project-title">Re:medi — LLM 기반 맞춤형 복약관리 서비스</h3>
@@ -285,26 +250,45 @@
           <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Re-medi" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
         </div>
 
+        <div class="project-card featured">
+          <div class="project-header">
+            <span class="project-icon">🫁</span>
+            <div>
+              <h3 class="project-title">AI 폐렴 진단 지원 시스템</h3>
+              <span class="project-role">팀 프로젝트 (3인, 백엔드/AI모델 서빙) | 헬스케어 부트캠프 | 2026.06</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            흉부 X-ray 이미지로 폐렴 여부를 예측하고 판단 근거를 시각화하는 의료진 지원 시스템에서, DB 모델링과 AI 예측 서빙 기능 구현을 담당
+          </p>
+          <ul class="project-points">
+            <li>ConvNeXt-Tiny + DenseNet121 각 5-Fold 앙상블(총 10개 모델) 추론 함수 구현 — OR 앙상블로 <strong>Balanced Accuracy 0.9615</strong> 달성
+            </li>
+            <li>OR 앙상블 근거: '폐렴 미검출(FN)이 오검출(FP)보다 치명적'이라는 임상 논리를 코드에 직접 반영</li>
+            <li>사전 설계된 ERD를 기반으로 5개 테이블(users·patients·medical_records·ai_analysis_result·xray_image)의 SQLAlchemy 모델·Alembic 마이그레이션 작성, TimestampMixin·GenderEnum 등 공통 컴포넌트 리팩터링</li>
+            <li>Tensor-level Hook 기반 Grad-CAM으로 AI 판단 근거를 흉부 X-ray 상에 시각화 → 의료진 신뢰성 확보</li>
+            <li>히트맵(base64) 저장 시 발생한 컬럼 용량 초과 문제를 MEDIUMTEXT 마이그레이션으로 해결, 회원가입·로그인·환자목록·AI예측 화면 프론트엔드 연동</li>
+          </ul>
+          <div class="project-result">
+            <span class="result-badge">Balanced Accuracy 0.9615</span>
+            <span class="result-badge">AI 예측 서빙 구현</span>
+            <span class="result-badge">Grad-CAM 시각화</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span><span class="stack-tag">PyTorch</span><span
+              class="stack-tag">FastAPI</span>
+            <span class="stack-tag">Docker</span><span class="stack-tag">MySQL</span><span
+              class="stack-tag">Redis</span>
+            <span class="stack-tag">SQLAlchemy</span>
+          </div>
+          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Oz_codingSchool" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
+        </div>
+
       </div>
 
       <!-- 서브 프로젝트 -->
       <h3 class="project-category">✅ 서브 프로젝트</h3>
       <div class="projects-sub">
-
-        <div class="project-card sub">
-          <span class="project-icon">🧬</span>
-          <h3 class="project-title">AI 기반 인슐린 투여량 분류 모델</h3>
-          <span class="project-role">개인 | ML · 의료 AI | 2026.06</span>
-          <p>UCI AIM '94 치료 세션 로그 기반 고주의약물 투여 의사결정 보조 모델. 위험 오답 최소화 목적함수로 4건→1건(0.03%) 달성. 이후 ARIA 원내 자동 투여 시스템 기반 모델로 재사용.</p>
-          <div class="project-result">
-            <span class="result-badge">고량 F1-Score 0.920</span>
-            <span class="result-badge">위험 오답 0.03%</span>
-          </div>
-          <div class="project-stack">
-            <span class="stack-tag">XGBoost</span><span class="stack-tag">LightGBM</span><span
-              class="stack-tag">Optuna</span><span class="stack-tag">SHAP</span>
-          </div>
-        </div>
 
         <div class="project-card sub">
           <span class="project-icon">🫁</span>
@@ -317,24 +301,6 @@
           <div class="project-stack">
             <span class="stack-tag">PyTorch</span><span class="stack-tag">ResNet18</span><span
               class="stack-tag">ConvNeXt</span>
-          </div>
-        </div>
-
-        <div class="project-card sub">
-          <span class="project-icon">🍼</span>
-          <h3 class="project-title">품앗이온(ON) · 온기</h3>
-          <span class="project-role">팀 (4인) | 프론트엔드·UX | 예선 통과(진행중) | 2026.07~</span>
-          <p>교대근무 부모의 육아 고립 문제를 여성 경력단절 사유 1위(육아 44.3%) 데이터 근거로 정의, AI가 이웃을 매칭해주는 서비스 기획 및 프론트엔드 개발.</p>
-          <ul class="project-points" style="margin-top:6px">
-            <li>온보딩·매칭결과·채팅 화면 React 개발, 사용자 플로우 설계, 시연 환경 구성</li>
-            <li>유사 서비스·MVP 조사, 화면설계서·화면디자인, 포인트 시스템 및 신뢰 3단계 등 안전장치 설계 논의 참여</li>
-          </ul>
-          <div class="project-result">
-            <span class="result-badge">예선 통과</span>
-          </div>
-          <div class="project-stack">
-            <span class="stack-tag">React</span><span class="stack-tag">Figma</span><span
-              class="stack-tag">UX 설계</span>
           </div>
         </div>
 
@@ -357,23 +323,9 @@
         </div>
 
         <div class="project-card sub">
-          <span class="project-icon">📊</span>
-          <h3 class="project-title">스트레스 수치 예측 (DACON)</h3>
-          <span class="project-role">개인 | 리더보드 12위 | ML · 회귀 | 2025</span>
-          <p>건강·생활습관 데이터 기반 stress_score 예측. 22개 피처, KNN Imputation, OHE, Optuna 200 Trial</p>
-          <div class="project-result">
-            <span class="result-badge">RMSE 0.17002</span>
-          </div>
-          <div class="project-stack">
-            <span class="stack-tag">LightGBM</span><span class="stack-tag">XGBoost</span><span
-              class="stack-tag">CatBoost</span><span class="stack-tag">RandomForest</span>
-          </div>
-        </div>
-
-        <div class="project-card sub">
           <span class="project-icon">🍀</span>
           <h3 class="project-title">난임 시술 성공 예측 (Kaggle)</h3>
-          <span class="project-role">팀 프로젝트 (3인, 개인 주도) | 리더보드 3위 | ML · DL · 이진분류 | 2026.06</span>
+          <span class="project-role">팀 프로젝트 (3인, 개인 주도) | ML · DL · 이진분류 | 2026.06</span>
           <p>영국 HFEA 익명화 데이터 기반 IVF/DI 난임 시술 임신 성공 여부 예측. 전처리·모델링·앙상블·PPT 발표 전담.</p>
           <ul class="project-points" style="margin-top:6px">
             <li>Train 256,351건 · 68개 컬럼 · 클래스 불균형(성공 26%) 이진분류</li>
