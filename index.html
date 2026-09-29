@@ -267,7 +267,7 @@
             <li>OR 앙상블 근거: '폐렴 미검출(FN)이 오검출(FP)보다 치명적'이라는 임상 논리를 코드에 직접 반영</li>
             <li>사전 설계된 ERD를 기반으로 5개 테이블(users·patients·medical_records·ai_analysis_result·xray_image)의 SQLAlchemy 모델·Alembic 마이그레이션 작성, TimestampMixin·GenderEnum 등 공통 컴포넌트 리팩터링</li>
             <li>Tensor-level Hook 기반 Grad-CAM으로 AI 판단 근거를 흉부 X-ray 상에 시각화 → 의료진 신뢰성 확보</li>
-            <li>히트맵(base64) 저장 시 발생한 컬럼 용량 초과 문제를 MEDIUMTEXT 마이그레이션으로 해결, 회원가입·로그인·환자목록·AI예측 화면 프론트엔드 연동</li>
+            <li>히트맵(base64) 저장 시 발생한 컬럼 용량 초과 문제의 원인을 파악(팀원이 MEDIUMTEXT 마이그레이션으로 해결), 회원가입·로그인·환자목록·AI예측 화면 프론트엔드 연동</li>
           </ul>
           <div class="project-result">
             <span class="result-badge">Balanced Accuracy 0.9615</span>
