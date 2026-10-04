@@ -36,8 +36,8 @@
       <p class="hero-tag">임상 간호사 출신 헬스케어 AI 개발자</p>
       <h1 class="hero-name">정다이</h1>
       <p class="hero-sub">
-        환자 안전을 최우선으로,<br />
-        <strong>치료 세션 데이터 기반 운영형 의료 AI 개발자</strong>
+        임상을 아는 헬스케어 AI 서비스 개발자<br />
+        <strong>모델을 실제 동작하는 서비스로 만듭니다</strong>
       </p>
       <p class="hero-quote">
         "환자 데이터 안에는 환자들의 이야기가 담겨 있습니다.<br>
@@ -69,7 +69,7 @@
             그 아쉬움이 저를 AI 개발로 이끌었습니다.
           </p>
           <p>
-            의료영상 · 임상 텍스트 · 웨어러블 시계열 데이터를 다루면서,
+            의료영상 · 정형 임상 데이터 · 치료 세션 시계열 데이터를 다루면서,
             현장의 그 <strong>'한 발'</strong>을 좁히는 도구를 만드는 헬스케어 AI 개발자로 성장하고 있습니다.
           </p>
           <p>
@@ -77,7 +77,7 @@
             프로토타입으로 구현하고, 실제 동작하는 서비스로 완성하는 과정을 즐깁니다.
           </p>
           <ul class="about-list">
-            <li><span class="label">관심 분야</span> 의료영상(CV), 임상 텍스트(NLP), AI 에이전트 개발</li>
+            <li><span class="label">관심 분야</span> 의료영상(CV), 정형 임상 데이터 ML, 헬스케어 AI 서비스 개발(백엔드·모델 서빙)</li>
             <li><span class="label">핵심 가치</span> 환자 안전 · 재현성 · 빠른 실행</li>
             <li><span class="label">강점</span> 문제 정의 → 실험 설계 → 결과 해석 → 제품화·배포</li>
             <li><span class="label">장기 비전</span> 개인화 혈당 예측 모델 및 RL 기반 인슐린 용량 최적화 시스템 개발</li>
@@ -117,7 +117,7 @@
             <span class="tag">LightGBM</span>
             <span class="tag">CatBoost</span>
             <span class="tag">PyTorch</span>
-            <span class="tag">Optuna (TPE 300 Trial)</span>
+            <span class="tag">Optuna</span>
             <span class="tag">SHAP</span>
             <span class="tag">Scikit-learn</span>
           </div>
@@ -167,7 +167,6 @@
             <span class="tag">치료 세션 시계열 처리</span>
             <span class="tag">의료 AI 안전성 설계</span>
             <span class="tag">임상 데이터 이해</span>
-            <span class="tag">의학 논문 리서치 (5편+)</span>
             <span class="tag">고주의약물 도메인</span>
           </div>
         </div>
@@ -220,22 +219,22 @@
             <span class="project-icon">💊</span>
             <div>
               <h3 class="project-title">Re:medi — LLM 기반 맞춤형 복약관리 서비스</h3>
-              <span class="project-role">팀 프로젝트 (5인) | 병합 PR 60건 이상 | 2026.06.29 ~ 08.07</span>
+              <span class="project-role">팀 프로젝트 (5인) | 병합 PR 64건 | 2026.06.29 ~ 08.07</span>
             </div>
           </div>
           <p class="project-desc">
-            진료 기록과 복약 정보를 기반으로 LLM이 맞춤형 복약 안내·생활습관 가이드를 자동 생성하는 풀스택 헬스케어 서비스 — 알림 시스템 전체 설계부터 트래킹, 마이다이어리까지 담당
+            진료 기록과 복약 정보를 기반으로 LLM이 맞춤형 복약 안내·생활습관 가이드를 자동 생성하는 풀스택 헬스케어 서비스 — 알림 시스템 설계·구축을 주도하고 트래킹, 마이다이어리까지 담당
           </p>
           <ul class="project-points">
             <li>알림 시스템(22건): 다중 회차(qd/bid/tid) 복약 알림 + 캘린더 연동, 무음 시간대 예외 규칙, 웹푸시(VAPID)·FCM 이중 채널 발송, 스누즈 바텀시트</li>
             <li>안드로이드 전용 알림 실패를 프로덕션 로그 분석으로 원인(Notification API 오용) 추적 후 <code>showNotification()</code> 경로로 통일해 수정</li>
-            <li>습관·순응도 트래킹(12건): LLM 습관 추천을 규칙+캐싱 구조로 재설계, 서버 계산 기반 순응도 히트맵 시각화, AI 월간 리포트 자동 생성</li>
-            <li>마이다이어리(6건): 식약처 식품영양성분DB 연동 식단 기록, MET 공식 기반 실시간 운동 칼로리 계산, 검색 정확도 개선(관련성 정렬 + AI 폴백)</li>
-            <li>UI 일관성(9건)·PWA 패키징(4건): 디자인 시스템 통일, 홈 화면 설치형 PWA 전환, 하단 탭바·온보딩 구현</li>
-            <li>대규모 소셜로그인 PR 병합 중 유실된 라우트·홈 기능·네비게이션 복구 등 인프라·버그 대응 6건</li>
+            <li>습관·목표·순응도 트래킹(13건): 진단명 기반 LLM 맞춤 습관 추천 — 질병×세부진단×자유입력 조합이 사실상 무한해 정적 규칙만으로 커버하기 어려워 도입. 질병 습관이 노출 구간에서 누락되던 로테이션 결함과 다중 질병 중복 문구를 우선순위·중복 제거 로직과 회귀 테스트로 수정한 뒤 질병 개수별 규칙 + 캐싱 구조로 재설계. 순응도 서버 계산 + 히트맵, AI 월간 리포트 자동 생성</li>
+            <li>마이다이어리(5건): 식약처 식품영양성분DB 연동 식단 기록, MET 공식 기반 실시간 운동 칼로리 계산, 검색 정확도 개선(관련성 정렬 + AI 폴백)</li>
+            <li>UI 일관성(12건)·PWA 패키징(3건): 디자인 시스템 통일, 홈 화면 설치형 PWA 전환, 하단 탭바·온보딩 구현</li>
+            <li>대규모 소셜로그인 PR 병합 중 유실된 라우트·홈 기능·네비게이션 복구, 마이그레이션 충돌 해소 등 인프라·버그 대응 9건</li>
           </ul>
           <div class="project-result">
-            <span class="result-badge">병합 PR 60건+</span>
+            <span class="result-badge">병합 PR 64건</span>
             <span class="result-badge">웹푸시·FCM 이중 채널</span>
             <span class="result-badge">순응도 히트맵 · AI 리포트</span>
           </div>
@@ -244,10 +243,10 @@
               class="stack-tag">Vite</span>
             <span class="stack-tag">FastAPI</span><span class="stack-tag">SQLAlchemy</span><span
               class="stack-tag">Alembic</span>
-            <span class="stack-tag">LLM (RAG)</span><span class="stack-tag">Docker</span><span
+            <span class="stack-tag">LLM 연동</span><span class="stack-tag">Docker</span><span
               class="stack-tag">AWS EC2</span>
           </div>
-          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Re-medi" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a></p>
+          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/-Re-medi" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 GitHub 보기</a> <a href="https://github.com/annajeong0429-ux/remedi_anna_part" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 내 커밋만 보기</a></p>
         </div>
 
         <div class="project-card featured">
@@ -255,14 +254,14 @@
             <span class="project-icon">🫁</span>
             <div>
               <h3 class="project-title">AI 폐렴 진단 지원 시스템</h3>
-              <span class="project-role">팀 프로젝트 (3인, 백엔드/AI모델 서빙) | 헬스케어 부트캠프 | 2026.06</span>
+              <span class="project-role">팀 프로젝트 (3인, 백엔드/AI모델 서빙) | 오즈코딩스쿨 부트캠프 | 2026.06</span>
             </div>
           </div>
           <p class="project-desc">
             흉부 X-ray 이미지로 폐렴 여부를 예측하고 판단 근거를 시각화하는 의료진 지원 시스템에서, DB 모델링과 AI 예측 서빙 기능 구현을 담당
           </p>
           <ul class="project-points">
-            <li>ConvNeXt-Tiny + DenseNet121 각 5-Fold 앙상블(총 10개 모델) 추론 함수 구현 — OR 앙상블로 <strong>Balanced Accuracy 0.9615</strong> 달성
+            <li>ConvNeXt-Tiny + DenseNet121 각 5-Fold 앙상블(총 10개 모델) 추론 함수 구현 — DACON 대회에서 검증한 OR 앙상블 모델을 서빙에 적용 (대회 리더보드 <strong>Balanced Accuracy 0.9615</strong>)
             </li>
             <li>OR 앙상블 근거: '폐렴 미검출(FN)이 오검출(FP)보다 치명적'이라는 임상 논리를 코드에 직접 반영</li>
             <li>사전 설계된 ERD를 기반으로 5개 테이블(users·patients·medical_records·ai_analysis_result·xray_image)의 SQLAlchemy 모델·Alembic 마이그레이션 작성, TimestampMixin·GenderEnum 등 공통 컴포넌트 리팩터링</li>
@@ -270,7 +269,7 @@
             <li>히트맵(base64) 저장 시 발생한 컬럼 용량 초과 문제의 원인을 파악(팀원이 MEDIUMTEXT 마이그레이션으로 해결), 회원가입·로그인·환자목록·AI예측 화면 프론트엔드 연동</li>
           </ul>
           <div class="project-result">
-            <span class="result-badge">Balanced Accuracy 0.9615</span>
+            <span class="result-badge">DACON 리더보드 BA 0.9615 모델 적용</span>
             <span class="result-badge">AI 예측 서빙 구현</span>
             <span class="result-badge">Grad-CAM 시각화</span>
           </div>
@@ -296,7 +295,7 @@
           <span class="project-role">개인 | 리더보드 7위 | CV · Transfer Learning | 2026.04</span>
           <p>ResNet18 → ConvNeXt-Tiny → 앙상블까지 단계적 개선, 20회 이상 체계적 실험. AI 폐렴 진단 지원 시스템의 서빙 모델로 재사용.</p>
           <div class="project-result">
-            <span class="result-badge">Balanced Accuracy 0.9615</span>
+            <span class="result-badge">리더보드 Balanced Accuracy 0.9615</span>
           </div>
           <div class="project-stack">
             <span class="stack-tag">PyTorch</span><span class="stack-tag">ResNet18</span><span
@@ -320,33 +319,34 @@
             <span class="stack-tag">XGBoost</span><span class="stack-tag">사업 기획</span><span
               class="stack-tag">규제 리서치</span>
           </div>
+          <p style="margin-top:10px"><a href="https://github.com/annajeong0429-ux/DM_Insulin_project" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 기반 인슐린 모델 GitHub</a></p>
         </div>
 
         <div class="project-card sub">
           <span class="project-icon">🍀</span>
           <h3 class="project-title">난임 시술 성공 예측 (Kaggle)</h3>
-          <span class="project-role">팀 프로젝트 (3인, 개인 주도) | ML · DL · 이진분류 | 2026.06</span>
+          <span class="project-role">오즈코딩스쿨 부트캠프 (3인) | ML · DL · 이진분류 | 2026.06</span>
           <p>영국 HFEA 익명화 데이터 기반 IVF/DI 난임 시술 임신 성공 여부 예측. 전처리·모델링·앙상블·PPT 발표 전담.</p>
           <ul class="project-points" style="margin-top:6px">
             <li>Train 256,351건 · 68개 컬럼 · 클래스 불균형(성공 26%) 이진분류</li>
             <li>핵심 전처리 8단계: 시술 유형 파싱, PGx 점수화, 불임 원인 등급, 배아 목적 멀티라벨 등 도메인 지식 기반</li>
             <li>파생 피처 7개 직접 설계: 임신성공률_이력, 나이_PGx_교호, 복합불임_플래그 등</li>
-            <li>데이터 누출(Leakage) 검증 실험 — 배아 컬럼 제거 시 OOF AUC −0.035 급락 → 유효성 증명 후 보존</li>
+            <li>데이터 누출(Leakage) 검증 — 배아 관련 사건이 모두 난자 채취 후 0~7일 안에 끝나 임신 판정(이식 후 약 2주) 이전 정보로 판단, 컬럼별 단변량 AUC 0.50~0.62로 사후 정보 혼입 징후가 없음을 확인해 보존 (제거 시 성능 하락만으로 판단하지 않음)</li>
             <li>5종 이기종 모델 앙상블: LightGBM · XGBoost · CatBoost · TabNet · FT-Transformer</li>
             <li>Nelder-Mead 가중치 최적화 앙상블 → LGBM 60% + FT-Transformer 40%로 최고점 달성</li>
           </ul>
           <div class="project-result" style="margin-top:8px">
             <span class="result-badge">ROC-AUC 0.7423 ★</span>
             <span class="result-badge">5종 모델 앙상블</span>
-            <span class="result-badge">Leakage 검증 실험</span>
+            <span class="result-badge">Leakage 검토</span>
           </div>
           <div class="project-stack" style="margin-top:8px">
             <span class="stack-tag">LightGBM</span><span class="stack-tag">XGBoost</span><span
               class="stack-tag">CatBoost</span>
-            <span class="stack-tag">TabNet</span><span class="stack-tag">FT-Transformer</span><span
-              class="stack-tag">Optuna</span>
+            <span class="stack-tag">TabNet</span><span class="stack-tag">FT-Transformer</span>
             <span class="stack-tag">SciPy (Nelder-Mead)</span><span class="stack-tag">PyTorch</span>
           </div>
+          <p style="margin-top:10px"><a href="https://docs.google.com/document/d/1qY7Mbsc24bTvK8QFjzsuxrDls_LaqYP-/edit?usp=sharing" target="_blank" class="btn btn-outline" style="padding:6px 14px;font-size:0.85rem;">🔗 프로젝트 보고서</a></p>
         </div>
 
       </div>
@@ -360,8 +360,8 @@
       <p class="section-sub">채용담당자 관점에서 자주 묻는 질문에 답합니다</p>
       <div class="qa-list">
         <div class="qa-item">
-          <div class="qa-q">Q. 왜 AI 에이전트/실데이터 기반 서비스 개발인가요?</div>
-          <div class="qa-a">병동에서 의료진이 데이터를 직접 찾아 판단하는 데 걸리는 시간이 늘 아쉬웠습니다. 원장님의 질문에 즉시 답하는 AI 에이전트, 매출·시술·환자 데이터를 한눈에 보여주는 대시보드처럼 — 병원 실데이터를 기반으로 의사결정을 빠르게 만드는 도구 개발로 향하고 있습니다. 레퍼런스와 생성형 AI 툴을 적극 활용해 빠르게 프로토타입을 만들고, 실제 현장에 바로 기여하는 서비스로 완성하는 과정을 즐깁니다.</div>
+          <div class="qa-q">Q. 왜 헬스케어 AI 서비스 개발인가요?</div>
+          <div class="qa-a">병동에서 의료진이 필요한 데이터를 찾고 판단하기까지 걸리는 시간이 늘 아쉬웠습니다. 모델 정확도를 높이는 데서 끝나지 않고, 그 결과를 API·DB·화면으로 연결해 현장에서 실제로 쓰이게 만드는 것이 제가 개발로 전향한 이유입니다. AI 폐렴 진단 지원 시스템(AI 예측 서빙·DB 모델링)과 Re:medi(알림·트래킹·LLM 연동)에서 이 흐름을 직접 구현했고, 생성형 AI 툴을 활용해 빠르게 프로토타입을 만들고 검증하는 과정을 즐깁니다.</div>
         </div>
         <div class="qa-item">
           <div class="qa-q">Q. 개발자로서 차별화된 무기는 무엇인가요?</div>
@@ -380,7 +380,7 @@
         </div>
         <div class="qa-item">
           <div class="qa-q">Q. 생성형 AI 툴을 어떻게 활용하나요?</div>
-          <div class="qa-a">비전공자로 개발을 시작한 만큼, ChatGPT·Claude·Cursor를 레퍼런스와 페어 프로그래머처럼 활용해 왔습니다. 다만 코드를 그대로 가져다 쓰기보다, 왜 이 구조를 선택했는지(예: Redis List Queue vs Celery, OR 앙상블 vs 단일 모델)를 직접 비교하고 문서화하는 과정을 거쳤습니다. AI 툴은 구현 속도를 높여주는 도구이고, 판단 기준은 임상 도메인 지식에서 나온다고 생각합니다.</div>
+          <div class="qa-a">비전공자로 개발을 시작한 만큼, Claude·Gemini·Cursor를 레퍼런스와 페어 프로그래머처럼 활용해 왔습니다. 다만 코드를 그대로 가져다 쓰기보다, 왜 이 구조를 선택했는지(예: Redis List Queue vs Celery, OR 앙상블 vs 단일 모델)를 직접 비교하고 문서화하는 과정을 거쳤습니다. AI 툴은 구현 속도를 높여주는 도구이고, 판단 기준은 임상 도메인 지식에서 나온다고 생각합니다.</div>
         </div>
       </div>
     </div>
@@ -412,7 +412,7 @@
         <div class="tl-item">
           <div class="tl-dot current"></div>
           <div class="tl-content">
-            <span class="tl-date">2026.02 ~ 2026.08 (예정)</span>
+            <span class="tl-date">2026.02 ~ 2026.08 (수료)</span>
             <h3>오즈코딩스쿨 헬스케어 AI 부트캠프</h3>
             <p>ML/DL 모델링 · FastAPI/Docker 기반 서비스 구축 · 의료 데이터 분석 실무 중심 커리큘럼. 팀 프로젝트 4회, DACON 대회 2회 참가.</p>
           </div>
